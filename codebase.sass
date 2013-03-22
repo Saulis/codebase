@@ -1,0 +1,38 @@
+$box-width: 10px
+$box-height: 10px
+
+body
+  color: red
+  background-color: white
+
+#cb
+  width: 9 * $box-width
+  height: 7 * $box-height
+  position: fixed
+  right: 50px
+  bottom: 50px
+
+#c
+  width: 4 * $box-width
+  height: 7 * $box-height
+  float: left
+
+#b
+  width: 4 * $box-width
+  height: 4 * $box-height
+  margin-left: $box-width
+  float: left
+
+
+@mixin div-base
+  width: $box-width
+  height: $box-height
+  float: left
+
+div.white
+  @include div-base
+  background-color: white
+
+div.grey
+  @include div-base
+  background-color: grey
